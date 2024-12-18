@@ -3,67 +3,71 @@ const chrome = require("selenium-webdriver/chrome");
 const fs = require("fs");
 
 const browserPath =
-  "C:\\ProgramFiles\\GoLogin_Pro\\orbita-browser-114\\chrome.exe";
+  "C:\\ProgramFiles\\AntidetectManager.2.1.2.9\\orbita-browser-129\\chrome.exe";
 const profilePaths = [
-  // "C:\\ProgramFiles\\GoLogin_Pro\\Profile_ALL\\0F37063EFF5F65E67496E98D69C94965",
-  // "C:\\ProgramFiles\\GoLogin_Pro\\Profile_ALL\\1D83C3662B4431E469D5C246699367B7",
-  // "C:\\ProgramFiles\\GoLogin_Pro\\Profile_ALL\\06FF6439A95F0B455FEAB3F6820F064C",
-  // "C:\\ProgramFiles\\GoLogin_Pro\\Profile_ALL\\24F59BD03211B1DB5A42ED6CB7F8B3C6",
-  // "C:\\ProgramFiles\\GoLogin_Pro\\Profile_ALL\\A7555E5A3740CB9EDC067CA41B15D610",
-  // "C:\\ProgramFiles\\GoLogin_Pro\\Profile_ALL\\DBB434BA300CBD15FACEBA7EBCF8E3BE",
-  // "C:\\ProgramFiles\\GoLogin_Pro\\Profile_ALL\\BCFF72CD4B03577E1D5E186A083A10CF",
+  "C:\\ProgramFiles\\AntidetectManager.2.1.2.9\\PROFILE_ALL\\0a70c6d29b9e2e303b95ab61\\PROFILE_DATA",
+  "C:\\ProgramFiles\\AntidetectManager.2.1.2.9\\PROFILE_ALL\\00e4feb4680a310fe10c1eab\\PROFILE_DATA",
+  "C:\\ProgramFiles\\AntidetectManager.2.1.2.9\\PROFILE_ALL\\981e4bd7bc849723592cd767\\PROFILE_DATA",
+  "C:\\ProgramFiles\\AntidetectManager.2.1.2.9\\PROFILE_ALL\\dd190f2e0d3b034598d8de46\\PROFILE_DATA",
+  "C:\\ProgramFiles\\AntidetectManager.2.1.2.9\\PROFILE_ALL\\d1eba2a53fd624539ad9eb7e\\PROFILE_DATA",
+  "C:\\ProgramFiles\\AntidetectManager.2.1.2.9\\PROFILE_ALL\\c5d3f003829a9e7d6ca8b05b\\PROFILE_DATA",
+  "C:\\ProgramFiles\\AntidetectManager.2.1.2.9\\PROFILE_ALL\\317e43282a56b5240d0d5a2e\\PROFILE_DATA",
 ];
 const urls = [
   // {
-  //   url: "https://web.telegram.org/k/#@bums",
-  //   startButton: ".new-message-bot-commands.is-view",
+    // url: "https://web.telegram.org/k/#@seed_coin_bot",
+    // startButton: ".new-message-bot-commands.is-view",
   // },
   // {
-  //   url: "https://web.telegram.org/k/#@sidekick_fans_bot",
-  //   startButton: ".new-message-bot-commands.is-view",
+    // url: "https://web.telegram.org/k/#@bums",
+    // startButton: ".new-message-bot-commands.is-view",
   // },
   // {
-  //   url: "https://web.telegram.org/k/#@OKX_official_bot",
-  //   startButton: ".new-message-bot-commands.is-view",
+    // url: "https://web.telegram.org/k/#@sidekick_fans_bot",
+    // startButton: ".new-message-bot-commands.is-view",
   // },
   // {
-  //     url: 'https://web.telegram.org/k/#@DuckChain_bot',
-  //     startButton: '.new-message-bot-commands.is-view'
+    // url: "https://web.telegram.org/k/#@OKX_official_bot",
+    // startButton: ".new-message-bot-commands.is-view",
   // },
   // {
-  //     url: 'https://web.telegram.org/k/#@theYescoin_bot',
-  //     startButton: '.new-message-bot-commands.is-view'
+    // url: "https://web.telegram.org/k/#@birdx2_bot",
+    // startButton: ".new-message-bot-commands.is-view",
   // },
+  // // {
+    // // url: "https://web.telegram.org/k/#@theYescoin_bot",
+    // // startButton: ".new-message-bot-commands.is-view",
+  // // },
   // {
-  //     url: 'https://web.telegram.org/k/#@birdx2_bot',
-  //     startButton: '.new-message-bot-commands.is-view'
-  // },
-  // {
-  //     url: 'https://web.telegram.org/k/#@xkucoinbot',
-  //     startButton: '.anchor-url.is-link.reply-markup-button.rp'
-  // },
-  // {
-  //     url: 'https://web.telegram.org/k/#@PAWSOG_bot',
-  //     startButton: '.new-message-bot-commands.is-view'
-  // },
-  // {
-  //     url: 'https://web.telegram.org/k/#@Tomarket_ai_bot',
-  //     startButton: '.new-message-bot-commands.is-view'
-  // },
-  // {
-  //     url: 'https://web.telegram.org/k/#@BlumCryptoBot',
-  //     startButton: '.new-message-bot-commands.is-view'
+      // url: 'https://web.telegram.org/k/#@DuckChain_bot',
+      // startButton: '.new-message-bot-commands.is-view'
   // },
   {
-    url: "https://web.telegram.org/k/#@seed_coin_bot",
-    startButton: ".new-message-bot-commands.is-view",
+      url: 'https://web.telegram.org/a/#7150269333',
+      startButton: '.bot-menu-icon.icon.icon-webapp.open"'
   },
   // {
-  //     url: 'https://web.telegram.org/k/#@MatchQuestBot',
-  //     startButton: '.anchor-url.is-link.reply-markup-button.rp'
+      // url: 'https://web.telegram.org/k/#@xkucoinbot',
+      // startButton: '.anchor-url.is-link.reply-markup-button.rp'
+  // },
+  // {
+      // url: 'https://web.telegram.org/k/#@PAWSOG_bot',
+      // startButton: '.new-message-bot-commands.is-view'
+  // },
+  // {
+      // url: 'https://web.telegram.org/k/#@Tomarket_ai_bot',
+      // startButton: '.new-message-bot-commands.is-view'
+  // },
+  // {
+      // url: 'https://web.telegram.org/k/#@BlumCryptoBot',
+      // startButton: '.new-message-bot-commands.is-view'
+  // },
+
+  // {
+      // url: 'https://web.telegram.org/k/#@MatchQuestBot',
+      // startButton: '.anchor-url.is-link.reply-markup-button.rp'
   // },
 ];
-
 function getFileNameFromUrl(url) {
   const urlParts = new URL(url);
   const name = urlParts.hash ? urlParts.hash.split("@")[1] : urlParts.hostname;
@@ -100,7 +104,7 @@ async function elementExists(driver, selector) {
     options.addArguments(`user-data-dir=${profilePath}`);
     options.addArguments(`user-data-dir=${profilePath}`);
     options.addArguments("--auto-open-devtools-for-tabs");
-    // options.addArguments("--headless=new");
+    // options.addArguments("--headless");
     options.addArguments("--window-size=1280,1024");
     options.addArguments("--disable-gpu");
     options.addArguments("--log-level=3");
@@ -219,7 +223,7 @@ async function elementExists(driver, selector) {
       console.error("Đã xảy ra lỗi:", error);
       // Xử lý lỗi, ví dụ: chụp ảnh màn hình
     } finally {
-      // await driver.quit();
+      await driver.quit();
     }
   }
 })();
